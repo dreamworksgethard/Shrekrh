@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Shrek $SHREK</title>
+    <meta
+      name="description"
+        content="Shrek $SHREK — a fun meme token site with buy links, tokenomics, and more."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./Logo.png?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=pons1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="scrollbar" aria-hidden="true">
+      <div class="scrollbar__bar" id="scrollbar"></div>
+    </div>
+
+    <div class="fx" aria-hidden="true">
+      <canvas class="fx__stars" id="stars"></canvas>
+      <div class="fx__grid"></div>
+      <div class="fx__scanlines"></div>
+      <div class="fx__glow"></div>
+      <div class="fx__wash fx__wash--a" id="washA"></div>
+      <div class="fx__wash fx__wash--b" id="washB"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#home" aria-label="Go to top">
+          <img class="brand__logo" src="./Logo.png?v=2" alt="Shrek logo" />
+          <span class="brand__text">
+            <span class="brand__name">Shrek</span>
+            <span class="brand__symbol">$SHREK</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#home">Home</a>
+          <a class="nav__link" href="#tokenomics">Tokenomics</a>
+          <a class="nav__link" href="#chart">Chart</a>
+          <a class="nav__link" href="#how">How to buy</a>
+          <a class="nav__link" href="#gallery">Gallery</a>
+        </nav>
+
+        <div class="topbar__cta">
+          <a class="btn btn--ghost" id="header-x-link" href="#" target="_blank" rel="noreferrer">X</a>
+          <a class="btn btn--primary" id="header-tg-link" href="#" target="_blank" rel="noreferrer">Telegram</a>
+        </div>
+
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile" id="mobile" hidden>
+        <div class="container mobile__inner">
+          <a class="mobile__link" href="#home">Home</a>
+          <a class="mobile__link" href="#tokenomics">Tokenomics</a>
+          <a class="mobile__link" href="#chart">Chart</a>
+          <a class="mobile__link" href="#how">How to buy</a>
+          <a class="mobile__link" href="#gallery">Gallery</a>
+          <div class="mobile__row">
+            <a class="btn btn--ghost" id="mobile-x-link" href="#" target="_blank" rel="noreferrer">X</a>
+            <a class="btn btn--primary" id="mobile-tg-link" href="#" target="_blank" rel="noreferrer">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="chip">Welcome to the swamp</p>
+            <h1 class="hero__title">
+              <span class="hero__titleTop">Shrek</span>
+              <span class="hero__titleBottom">$SHREK</span>
+            </h1>
+            <p class="hero__subtitle">
+              Shrek the meme coin on <strong>Robinhood Chain</strong>, paired with the <strong>Netflix</strong> pair. Simple, fun, and built for the swamp.
+            </p>
+
+            <div class="hero-float" aria-hidden="true">
+              <img class="hero-float__shrek" src="./Shrek_(character).png" alt="" />
+              <img class="hero-float__donkey" src="./Donkey_(Shrek).png" alt="" />
+            </div>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#chart">Live Chart</a>
+              <a
+                class="btn btn--ghost btn--lg"
+                id="hero-buy-link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buy here (Pons)
+              </a>
+            </div>
+
+          </div>
+
+          <div class="hero__art" aria-hidden="true">
+            <div class="card card--art" data-tilt>
+              <div class="logo-orb logo-orb--hero" aria-hidden="true">
+                <img class="logo-orb__img" src="./Logo.png?v=2" alt="" />
+              </div>
+              <div class="art__shine"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tokenomics">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Tokenomics</h2>
+            <p class="section__subtitle">Clean & simple.</p>
+          </div>
+
+          <div class="tok">
+            <div class="tok__stats" data-reveal>
+              <div class="tok__grid">
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2.75c3.6 0 6.5 2.9 6.5 6.5s-2.9 6.5-6.5 6.5-6.5-2.9-6.5-6.5 2.9-6.5 6.5-6.5Z" />
+                        <path d="M8.5 9.25h7" />
+                        <path d="M9.25 12.25h5.5" />
+                        <path d="M10.25 20.75h3.5" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Name</div>
+                      <div class="tokstat__v" id="tok-name">Shrek $SHREK</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2.75 19 6.5v11L12 21.25 5 17.5v-11L12 2.75Z" />
+                        <path d="M12 2.75v18.5" />
+                        <path d="M5 6.5l14 0" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Total Supply</div>
+                      <div class="tokstat__v" id="tok-supply">1B</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3.25c3.45 0 6.25 2.8 6.25 6.25S15.45 15.75 12 15.75 5.75 12.95 5.75 9.5 8.55 3.25 12 3.25Z" />
+                        <path d="M12 7v5l3 2" />
+                        <path d="M4 20.75h16" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Tax (Buy/Sell)</div>
+                      <div class="tokstat__v" id="tok-tax">0/0</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3.5c4.3 0 7.75 3.45 7.75 7.75S16.3 19 12 19 4.25 15.55 4.25 11.25 7.7 3.5 12 3.5Z" />
+                        <path d="M9.25 11.25h5.5" />
+                        <path d="M12 8.5v5.5" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Liquidity</div>
+                      <div class="tokstat__v" id="tok-lp">Burned</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2.75 20 6.75v10.5l-8 4-8-4V6.75l8-4Z" />
+                        <path d="M8.5 12.25 11 14.75l4.5-5" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Ownership</div>
+                      <div class="tokstat__v" id="tok-own">Renounced</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card tok__card" data-tilt>
+                  <div class="tokstat">
+                    <div class="tokstat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2.75 19 6.5v11L12 21.25 5 17.5v-11L12 2.75Z" />
+                        <path d="M8.5 10.5h7" />
+                        <path d="M9.5 13.5h5" />
+                      </svg>
+                    </div>
+                    <div class="tokstat__meta">
+                      <div class="tokstat__k">Launch Platform</div>
+                      <a class="tokstat__v" id="tok-ilp-link" href="https://ponsfamily.com" target="_blank" rel="noreferrer"><span id="tok-ilp-stat">Pons</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="how-net" data-reveal>
+            <div class="how-net__item"><span class="how-net__k">Network</span><span class="how-net__v">Robinhood Chain</span></div>
+            <div class="how-net__item"><span class="how-net__k">Chain ID</span><span class="how-net__v">4663</span></div>
+            <div class="how-net__item"><span class="how-net__k">RPC</span><span class="how-net__v how-net__v--mono">rpc.mainnet.chain.robinhood.com</span></div>
+            <div class="how-net__item"><span class="how-net__k">Explorer</span><span class="how-net__v">robinhoodchain.blockscout.com</span></div>
+          </div>
+
+          <div class="pair card" data-reveal>
+            <div class="pair__glow" aria-hidden="true"></div>
+            <div class="pair__top">
+              <p class="pair__eyebrow">Featured pair</p>
+              <span class="pair__fee">1% of all fees → holders</span>
+            </div>
+
+            <div class="pair__arena">
+              <div class="pair__side">
+                <div class="pair__orb">
+                  <img src="./Logo.png?v=2" alt="Shrek $SHREK logo" />
+                </div>
+                <div class="pair__meta">
+                  <span class="pair__ticker">$SHREK</span>
+                  <span class="pair__name">Shrek</span>
+                </div>
+              </div>
+
+              <div class="pair__mid" aria-hidden="true">
+                <span class="pair__slash">/</span>
+                <span class="pair__pulse"></span>
+              </div>
+
+              <div class="pair__side pair__side--netflix">
+                <div class="pair__orb pair__orb--netflix">
+                  <img
+                    class="pair__netflix"
+                    src="./assets/netflix-n.svg"
+                    alt="Netflix official logo"
+                  />
+                </div>
+                <div class="pair__meta">
+                  <span class="pair__ticker">NFLX</span>
+                  <span class="pair__name">Netflix</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="pair__copy">
+              The <strong>$SHREK / NFLX</strong> pair — Shrek meets Netflix, now onchain.
+              <strong>1% of all fees</strong> from this pair is paid straight to $SHREK holders.
+            </p>
+          </div>
+
+          <!-- Paid to Holders card -->
+          <div class="pth card" data-reveal>
+            <div class="pth__left">
+              <p class="pth__label">PAID TO HOLDERS</p>
+              <p class="pth__value">$<span id="pth-usd" class="pth__calc">———</span></p>
+              <p class="pth__sub"><span id="pth-token" class="pth__calc">———</span> <span class="pth__sym">$SHREK</span></p>
+              <p class="pth__desc" id="pth-desc">Calculating<span class="pth__dots" aria-hidden="true"></span></p>
+            </div>
+            <div class="pth__right" aria-hidden="true">
+              <canvas class="pth__chart" id="pth-chart" width="320" height="100"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--chart" id="chart">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Live Chart</h2>
+            <p class="section__subtitle">Coming soon.</p>
+          </div>
+
+          <div class="chart-empty card" data-reveal>
+            <p class="chart-empty__kicker">Live Chart</p>
+            <p class="chart-empty__title">Not a token yet</p>
+            <p class="chart-empty__text">
+              Chart goes live when $SHREK launches on Robinhood Chain.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">How to buy</h2>
+            <p class="section__subtitle">Buy $SHREK on Robinhood Chain in three steps.</p>
+          </div>
+
+          <div class="grid grid--3">
+            <div class="card howcard" data-tilt data-reveal>
+              <div class="step">
+                <div class="step__top">
+                  <span class="step__num">1</span>
+                  <span class="step__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M7.5 7.75c0-1.8 1.46-3.25 3.25-3.25h2.5c1.8 0 3.25 1.46 3.25 3.25v.5c0 1.8-1.46 3.25-3.25 3.25h-2.5c-1.8 0-3.25-1.46-3.25-3.25v-.5Z" />
+                      <path d="M6 20.25c0-3.2 2.6-5.8 5.8-5.8h.4c3.2 0 5.8 2.6 5.8 5.8" />
+                      <path d="M6.5 11.5h11" />
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="card__title">Connect to Robinhood Chain</h3>
+                <p class="card__text">Use Robinhood Wallet (native), or add Robinhood Chain in MetaMask / Rabby — Chain ID <strong>4663</strong>.</p>
+                <div class="step__tag">Chain ID 4663</div>
+              </div>
+            </div>
+            <div class="card howcard" data-tilt data-reveal>
+              <div class="step">
+                <div class="step__top">
+                  <span class="step__num">2</span>
+                  <span class="step__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M4.75 9.25h14.5c.97 0 1.75.78 1.75 1.75v7c0 .97-.78 1.75-1.75 1.75H4.75C3.78 19.75 3 18.97 3 18v-7c0-.97.78-1.75 1.75-1.75Z" />
+                      <path d="M17.25 14h2.5" />
+                      <path d="M6.5 9.25V7.5c0-1.8 1.46-3.25 3.25-3.25h4.5c1.8 0 3.25 1.46 3.25 3.25v1.75" />
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="card__title">Bridge ETH in</h3>
+                <p class="card__text">Bridge ETH onto Robinhood Chain for gas and your buy. Fees on Robinhood Chain are paid in ETH.</p>
+                <div class="step__tag">Bridge ETH</div>
+              </div>
+            </div>
+            <div class="card howcard" data-tilt data-reveal>
+              <div class="step">
+                <div class="step__top">
+                  <span class="step__num">3</span>
+                  <span class="step__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M7.5 7.5h9c1.66 0 3 1.34 3 3v0c0 1.66-1.34 3-3 3h-9" />
+                      <path d="M9.5 5.5 7 7.99 9.5 10.5" />
+                      <path d="M16.5 16.5h-9c-1.66 0-3-1.34-3-3v0c0-1.66 1.34-3 3-3h9" />
+                      <path d="M14.5 18.5 17 16.01 14.5 13.5" />
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="card__title">Buy on Pons</h3>
+                <p class="card__text">Open Pons, connect on Robinhood Chain, then swap ETH → $SHREK when the token is live.</p>
+                <div class="step__tag">Pons</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section section--gallery" id="gallery">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Gallery</h2>
+            <p class="section__subtitle">Swamp moments. Click to zoom.</p>
+          </div>
+
+          <div class="gallery" data-reveal>
+            <button class="gcard" type="button" data-lightbox="./assets/Shrek__character_-ce068eda-2210-41a7-b9ab-3f6d45bff5a9.png" data-caption="Shrek (character)">
+              <img src="./assets/Shrek__character_-ce068eda-2210-41a7-b9ab-3f6d45bff5a9.png" alt="Shrek character" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+
+            <button class="gcard" type="button" data-lightbox="./assets/Donkey__Shrek_-78cfcd53-8891-4ccc-9f34-ef2636b3f2f6.png" data-caption="Donkey">
+              <img src="./assets/Donkey__Shrek_-78cfcd53-8891-4ccc-9f34-ef2636b3f2f6.png" alt="Donkey from Shrek" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+
+            <button class="gcard" type="button" data-lightbox="./assets/shrek-gallery-1-e547b6fe-6961-4267-81b1-730738ba39f1.png" data-caption="Shrek & Fiona">
+              <img src="./assets/shrek-gallery-1-e547b6fe-6961-4267-81b1-730738ba39f1.png" alt="Shrek and Fiona" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+
+            <button class="gcard" type="button" data-lightbox="./assets/AAAAQSxer8DRX301eMBPo4ZHKkzyNRU6NxNXRH0EL4IOdcX_s7v7p7j9ssCKL14EGjl7-_LhaRnjppTaZmoOhLqgcgdbla5JpW2UaznJ7Ta8yX6BfsTNbiXf8QrfvOfqaKQ1VhsVCSnVYoZCAPS3IjwxU23wHMw-258927a8-6967-4e12-9d7f-09cd43f09737.png" data-caption="Ogre mode">
+              <img src="./assets/AAAAQSxer8DRX301eMBPo4ZHKkzyNRU6NxNXRH0EL4IOdcX_s7v7p7j9ssCKL14EGjl7-_LhaRnjppTaZmoOhLqgcgdbla5JpW2UaznJ7Ta8yX6BfsTNbiXf8QrfvOfqaKQ1VhsVCSnVYoZCAPS3IjwxU23wHMw-258927a8-6967-4e12-9d7f-09cd43f09737.png" alt="Shrek meme still" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+
+            <button class="gcard" type="button" data-lightbox="./assets/18shrek-1-mediumSquareAt3X-38527694-f5f8-4522-b766-d47e21d36145.png" data-caption="Classic Shrek">
+              <img src="./assets/18shrek-1-mediumSquareAt3X-38527694-f5f8-4522-b766-d47e21d36145.png" alt="Classic Shrek closeup" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+
+            <button class="gcard" type="button" data-lightbox="./assets/shrek-gifgod-afa1d7ea-44a5-4c96-9ad5-b2b712f716a7.png" data-caption="Swamp vibes">
+              <img src="./assets/shrek-gifgod-afa1d7ea-44a5-4c96-9ad5-b2b712f716a7.png" alt="Shrek gif still" loading="lazy" />
+              <span class="gcard__shine" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer">
+            <div class="footer__left">
+              <div class="footer__brand">
+                <img src="./Logo.png?v=2" alt="Shrek logo" />
+                <span>Shrek <strong>$SHREK</strong></span>
+              </div>
+              <p class="footer__disclaimer">
+                $SHREK is a meme coin on Robinhood Chain. Not financial advice. Keep it fun, keep it safe.
+              </p>
+            </div>
+            <div class="footer__right">
+              <button class="btn btn--ghost" id="scroll-top" type="button">Back to top</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <div class="toast__inner" id="toast-text">Copied</div>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox__backdrop" id="lightbox-close" type="button" aria-label="Close image"></button>
+      <figure class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview">
+        <img class="lightbox__img" id="lightbox-img" alt="" />
+        <figcaption class="lightbox__cap" id="lightbox-cap"></figcaption>
+        <button class="lightbox__x" id="lightbox-x" type="button" aria-label="Close">✕</button>
+      </figure>
+    </div>
+
+    <script src="./script.js?v=pons1" defer></script>
+  </body>
+</html>
