@@ -16,7 +16,7 @@ const CONFIG = {
     etherscan: "#",
     holders: "#",
     launchPlatform: "https://ponsfamily.com",
-    x: "https://x.com/",
+    x: "https://x.com/ShrekRhChain",
     tg: "https://t.me/shrekrh",
   },
   tokenSplit: {
@@ -72,19 +72,23 @@ function toast(msg) {
 }
 
 function initCopyButtons() {
-  const ca = CONFIG.contractAddress;
-  if (!ca) return;
   const ids = [
     "copy-ca-btn",
     "copy-ca-btn-mobile",
     "copy-ca-btn-hero",
     "copy-ca-inline",
+    "copy-ca-tokenomics",
   ];
 
   for (const id of ids) {
     const el = document.getElementById(id);
     if (!el) continue;
     el.addEventListener("click", async () => {
+      const ca = CONFIG.contractAddress?.trim();
+      if (!ca) {
+        toast("CA coming soon");
+        return;
+      }
       const ok = await copyText(ca);
       toast(ok ? "Copied contract address" : "Copy failed");
     });
@@ -454,6 +458,13 @@ function renderConfig() {
   setText("tok-name", `Shrek ${CONFIG.symbol}`);
   setText("tok-ilp-stat", CONFIG.launchPlatform);
   setHref("tok-ilp-link", CONFIG.links.launchPlatform);
+
+  const caEl = document.getElementById("tok-ca");
+  if (caEl) {
+    const ca = CONFIG.contractAddress?.trim();
+    caEl.textContent = ca || "Coming soon";
+    caEl.title = ca || "";
+  }
 
   setHref("header-x-link", CONFIG.links.x);
   setHref("header-tg-link", CONFIG.links.tg);
