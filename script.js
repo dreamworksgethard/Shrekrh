@@ -2,7 +2,7 @@ const CONFIG = {
   name: "Shrek Symbol",
   symbol: "$SHREK",
   chain: "Robinhood Chain",
-  contractAddress: "",
+  contractAddress: "0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530",
   supply: "1B",
   buyTax: "0%",
   sellTax: "0%",
@@ -10,12 +10,16 @@ const CONFIG = {
   ownershipBadge: "Renounced",
   launchPlatform: "Pons",
   links: {
-    dex: "https://ponsfamily.com",
+    dex: "https://www.ponsfamily.com/launchpad/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530",
     cex: "https://www.coinbase.com/",
-    chart: "#chart",
-    etherscan: "#",
+    chart:
+      "https://dexscreener.com/robinhood/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530?embed=1&theme=dark&trades=0&info=0",
+    chartExternal:
+      "https://dexscreener.com/robinhood/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530",
+    etherscan:
+      "https://robinhoodchain.blockscout.com/token/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530",
     holders: "#",
-    launchPlatform: "https://ponsfamily.com",
+    launchPlatform: "https://www.ponsfamily.com/launchpad/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530",
     x: "https://x.com/ShrekRhChain",
     tg: "https://t.me/shrekrh",
   },
@@ -459,18 +463,17 @@ function renderConfig() {
   setText("tok-ilp-stat", CONFIG.launchPlatform);
   setHref("tok-ilp-link", CONFIG.links.launchPlatform);
 
-  const caEl = document.getElementById("tok-ca");
-  if (caEl) {
-    const ca = CONFIG.contractAddress?.trim();
-    caEl.textContent = ca || "Coming soon";
-    caEl.title = ca || "";
-  }
-
   setHref("header-x-link", CONFIG.links.x);
   setHref("header-tg-link", CONFIG.links.tg);
   setHref("mobile-x-link", CONFIG.links.x);
   setHref("mobile-tg-link", CONFIG.links.tg);
   setHref("hero-buy-link", CONFIG.links.dex);
+  setHref("chart-external-link", CONFIG.links.chartExternal || CONFIG.links.chart);
+
+  const chartFrame = document.getElementById("chart-embed");
+  if (chartFrame && CONFIG.links.chart && !CONFIG.links.chart.startsWith("#")) {
+    chartFrame.src = CONFIG.links.chart;
+  }
   // Footer/links section removed; header buttons remain wired above.
 
   const split = CONFIG.tokenSplit;
