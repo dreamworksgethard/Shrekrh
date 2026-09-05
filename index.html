@@ -19,7 +19,7 @@
     />
 
     <link rel="icon" href="./Logo.png?v=2" />
-    <link rel="stylesheet" href="./styles.css?v=pons2" />
+    <link rel="stylesheet" href="./styles.css?v=pons3" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -105,12 +105,20 @@
               <a
                 class="btn btn--ghost btn--lg"
                 id="hero-buy-link"
-                href="#"
+                href="https://www.ponsfamily.com/launchpad/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530"
                 target="_blank"
                 rel="noreferrer"
               >
                 Buy here (Pons)
               </a>
+            </div>
+
+            <div class="ca">
+              <span class="ca__label">CA</span>
+              <code class="ca__value" id="hero-ca">0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530</code>
+              <button class="ca__copy" id="copy-ca-btn-hero" type="button" aria-label="Copy contract address">
+                Copy CA
+              </button>
             </div>
 
           </div>
@@ -244,7 +252,7 @@
 
           <div class="ca ca--tok" data-reveal>
             <span class="ca__label">Contract</span>
-            <code class="ca__value" id="tok-ca">Coming soon</code>
+            <code class="ca__value" id="tok-ca">0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530</code>
             <button class="ca__copy" id="copy-ca-tokenomics" type="button" aria-label="Copy contract address">
               Copy CA
             </button>
@@ -313,15 +321,19 @@
         <div class="container">
           <div class="section__head">
             <h2 class="section__title">Live Chart</h2>
-            <p class="section__subtitle">Coming soon.</p>
+            <p class="section__subtitle">
+              <a id="chart-external-link" href="https://dexscreener.com/robinhood/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530" target="_blank" rel="noreferrer">Open on DexScreener ↗</a>
+            </p>
           </div>
 
-          <div class="chart-empty card" data-reveal>
-            <p class="chart-empty__kicker">Live Chart</p>
-            <p class="chart-empty__title">Not a token yet</p>
-            <p class="chart-empty__text">
-              Chart goes live when $SHREK launches on Robinhood Chain.
-            </p>
+          <div class="embed" data-reveal>
+            <iframe
+              id="chart-embed"
+              title="$SHREK live chart"
+              loading="lazy"
+              allow="clipboard-write"
+              src="https://dexscreener.com/robinhood/0x4AB6A8Ab66442A82ee0aa273aDCcEFc5D59c7530?embed=1&theme=dark&trades=0&info=0"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -382,7 +394,7 @@
                   </span>
                 </div>
                 <h3 class="card__title">Buy on Pons</h3>
-                <p class="card__text">Open Pons, connect on Robinhood Chain, then swap ETH → $SHREK when the token is live.</p>
+                <p class="card__text">Open Pons, connect on Robinhood Chain, then swap into $SHREK with the contract address above.</p>
                 <div class="step__tag">Pons</div>
               </div>
             </div>
@@ -465,6 +477,6 @@
       </figure>
     </div>
 
-    <script src="./script.js?v=x1" defer></script>
+    <script src="./script.js?v=x2" defer></script>
   </body>
 </html>

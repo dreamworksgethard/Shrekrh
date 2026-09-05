@@ -405,6 +405,19 @@ main{position:relative; z-index:1}
   cursor:pointer;
 }
 .ca__copy:hover{transform: translateY(-1px)}
+.ca--tok{
+  margin-top: 14px;
+  border: 1px solid rgba(204,255,0,.22);
+  background: rgba(204,255,0,.06);
+}
+.ca--tok .ca__value{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: min(100%, 52ch);
+}
 
 .badges{margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap}
 .badge{
@@ -724,6 +737,12 @@ main{position:relative; z-index:1}
   text-transform: none;
 }
 .section__subtitle{margin:0; color: rgba(163,163,163,.92); font-weight: 700}
+.section__subtitle a{
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: 800;
+}
+.section__subtitle a:hover{ text-decoration: underline; }
 
 .grid{display:grid; gap:14px}
 .grid--3{grid-template-columns: repeat(3, 1fr)}
@@ -1666,6 +1685,36 @@ a.tokstat__v:hover{
   .how-net__v, .how-net__v--mono{
     font-size: 13px;
     overflow-wrap: anywhere;
+  }
+  .ca--tok{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero .ca{
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+  }
+  .hero .ca__value{
+    max-width: 100%;
+    flex: 1 1 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+  }
+  .hero .ca__copy{
+    margin-left: 0;
+    width: 100%;
+  }
+  .ca--tok .ca__value{
+    max-width: 100%;
+    flex: 1 1 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .ca--tok .ca__copy{
+    margin-left: 0;
+    width: 100%;
   }
 
   /* Pair: keep orbs tiny, stack cleanly */
